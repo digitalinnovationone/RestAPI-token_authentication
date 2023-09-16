@@ -1,0 +1,17 @@
+{% extends "index.html" %}
+{% load bootstrap5 %}
+{% block principal %}
+
+  {% if success %}
+    <p class="alert alert-success"> Subscriber successfully registered!</p>
+  {% endif %}
+
+  <form action="" method="POST" id="form">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+
+    <button type="submit" class="btn btn-primary btn-block">Finish register</button>   
+  
+  </form>
+
+{% endblock %}
